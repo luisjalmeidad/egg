@@ -6,6 +6,8 @@
 package Services;
 
 import Entity.Ahorcado;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -56,7 +58,7 @@ public class AhorcadoService {
             }
         }
         System.out.println("No se encuentra la letra \"" + letra + "\" en la palabra secreta...");
-        
+
     }
 
     public boolean letrasEncontradas(Ahorcado aho, String letra) {
@@ -84,8 +86,17 @@ public class AhorcadoService {
         System.out.println("Número de oportunidades restantes: " + aho.getCantidadIntentos());
     }
 
+    public boolean letraRepetida(Ahorcado aho, String letra) {
+
+        if (!aho.getLetrasEncontradas().isEmpty()) {
+            return aho.getLetrasEncontradas().contains(letra);
+        }
+
+        return false;
+    }
+
     public void juego(Ahorcado aho) {
-        
+
         String letra;
         String palabra = "";
 
@@ -93,14 +104,17 @@ public class AhorcadoService {
 
             System.out.println("Ingrese una letra");
             letra = leer.next();
-
-            mostrarLongitud(aho);
-            buscarLetra(aho, letra);
-            if (!letrasEncontradas(aho, letra)) {
-                aho.setCantidadIntentos(aho.getCantidadIntentos() - 1);
+            if (!letraRepetida(aho, letra)) {
+                aho.setLetrasEncontradas(letra);
+                mostrarLongitud(aho);
+                buscarLetra(aho, letra);
+                if (!letrasEncontradas(aho, letra)) {
+                    aho.setCantidadIntentos(aho.getCantidadIntentos() - 1);
+                }
+                mostrarIntentos(aho);
+            } else {
+                System.out.println("La letra \"" + letra + "\" ya la has seleccionado, prueba con otra letra");
             }
-            mostrarIntentos(aho);
-
         } while (aho.getCantidadIntentos() > 0 && aho.getCantidadLetrasEncontradas() < aho.getPalabraSecreta().length);
 
         if (aho.getCantidadIntentos() == 0) {
