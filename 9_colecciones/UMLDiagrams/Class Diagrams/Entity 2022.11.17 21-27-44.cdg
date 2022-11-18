@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entity">
+  <ClassDiagramComponents>
+    <Class name="Juego" package="Entity" visibility="public" xPosition="632.0" yPosition="20.0">
+      <Fields>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="revolver" type="Revolver" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="jugadores"/>
+          <Argument type="Revolver" name="revolver"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getJugadores" returnType="ArrayList&lt;Jugador&gt;" visibility="public"/>
+        <Method name="setJugadores" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="jugadores"/>
+        </Method>
+        <Method name="getRevolver" returnType="Revolver" visibility="public"/>
+        <Method name="setRevolver" returnType="void" visibility="public">
+          <Argument type="Revolver" name="revolver"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="Entity" visibility="public" xPosition="644.0" yPosition="397.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="Mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="boolean" name="estaMojado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="isMojado" returnType="boolean" visibility="public"/>
+        <Method name="setEstaMojado" returnType="void" visibility="public">
+          <Argument type="boolean" name="estaMojado"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="Entity" visibility="public" xPosition="1127.0" yPosition="767.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="double" name="tamanio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getTamanio" returnType="double" visibility="public"/>
+        <Method name="setTamanio" returnType="void" visibility="public">
+          <Argument type="double" name="tamanio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Entity" visibility="public" xPosition="1627.0" yPosition="721.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="documento"/>
+          <Argument type="Perro" name="perro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getDocumento" returnType="String" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="String" name="documento"/>
+        </Method>
+        <Method name="getPerro" returnType="Perro" visibility="public"/>
+        <Method name="setPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="perro"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Revolver" package="Entity" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionAgua" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="posicionActual"/>
+          <Argument type="int" name="posicionAgua"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPosicionActual" returnType="int" visibility="public"/>
+        <Method name="setPosicionActual" returnType="void" visibility="public">
+          <Argument type="int" name="posicionActual"/>
+        </Method>
+        <Method name="getPosicionAgua" returnType="int" visibility="public"/>
+        <Method name="setPosicionAgua" returnType="void" visibility="public">
+          <Argument type="int" name="posicionAgua"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="jugadores" source="Entity.Juego" target="Entity.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+    <HasRelation name="perro" source="Entity.Persona" target="Entity.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entity.Persona" target="Entity.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entity.Juego" target="Entity.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entity.Juego" target="Entity.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="revolver" source="Entity.Juego" target="Entity.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
