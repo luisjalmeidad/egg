@@ -4,6 +4,8 @@
  */
 package Entity;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author A309436
@@ -15,17 +17,25 @@ public class Persona {
     private String apellido;
     private int edad;
     private String documento;
-    private Perro perro;
+    private ArrayList<Perro> perros;
 
     public Persona() {
     }
-
-    public Persona(String nombre, String apellido, int edad, String documento, Perro perro) {
+    
+    public Persona(String nombre, String apellido, int edad, String documento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.documento = documento;
-        this.perro = perro;
+        perros = new ArrayList();
+    }
+
+    public Persona(String nombre, String apellido, int edad, String documento, ArrayList<Perro> perros) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.documento = documento;
+        this.perros = perros;
     }
 
     public String getNombre() {
@@ -60,25 +70,18 @@ public class Persona {
         this.documento = documento;
     }
 
-    public Perro getPerro() {
-        return perro;
+    public ArrayList<Perro> getPerros() {
+        return perros;
     }
 
-    public void setPerro(Perro perro) {
-        this.perro = perro;
+    public void setPerros(ArrayList<Perro> perros) {
+        this.perros = perros;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documento=" + documento + ", perro=" + perro + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documento=" + documento + ", perros=" + perros + '}';
     }
-    
-    
-    
-    
-    
-    
-    
     
 }
 
