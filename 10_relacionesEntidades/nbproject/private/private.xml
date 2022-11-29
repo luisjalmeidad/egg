@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/relacionesEntidades/src/Ejercicio01.java</file>
-            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/Services/PersonaService.java</file>
+            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/Entity/Cine.java</file>
+            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/Entity/Pelicula.java</file>
+            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/Services/CineService.java</file>
+            <file>file:/C:/Users/a309436/OneDrive%20-%20Santander%20Office%20365/Documentos/Area%20de%20estudio/egg/egg/10_relacionesEntidades/src/relacionesEntidades/src/EjercicioExtra02.java</file>
         </group>
     </open-files>
 </project-private>
