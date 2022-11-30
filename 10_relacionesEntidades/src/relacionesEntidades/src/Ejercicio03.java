@@ -4,7 +4,7 @@
  */
 package relacionesEntidades.src;
 
-import Services.CartaService;
+import Services.BarajaService;
 
 /**
  *
@@ -33,7 +33,7 @@ public class Ejercicio03 {
         //• mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, si se saca una carta y
         //luego se llama al método, este no mostrara esa primera carta.
         
-        CartaService cs = new CartaService();
+        BarajaService cs = new BarajaService();
         cs.iniciarJuego();
         
         

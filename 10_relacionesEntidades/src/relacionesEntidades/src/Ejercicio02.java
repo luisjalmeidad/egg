@@ -7,7 +7,7 @@ package relacionesentidades;
 import Entity.Juego;
 import Entity.Jugador;
 import Entity.Revolver;
-import Services.JuegoService;
+import Services.RuletaService;
 import java.util.ArrayList;
 
 /**
@@ -53,7 +53,7 @@ public class Ejercicio02 {
     //mojar. Al final del juego, se debe mostrar que jugador se mojó.
     //Pensar la lógica necesaria para realizar esto, usando los atributos de la clase Juego.
     
-    JuegoService js = new JuegoService();
+    RuletaService js = new RuletaService();
     Revolver r = new Revolver();
     Juego juego = new Juego();
     ArrayList<Jugador> jugadores = new ArrayList<Jugador>();

@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author A309436
  */
-public class CartaService {
+public class BarajaService {
 
     Scanner leer = new Scanner(System.in);
 

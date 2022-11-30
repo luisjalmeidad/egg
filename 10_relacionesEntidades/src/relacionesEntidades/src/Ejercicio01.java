@@ -6,7 +6,7 @@ package relacionesentidades;
 
 import Entity.Perro;
 import Entity.Persona;
-import Services.PersonaService;
+import Services.AdopcionService;
 import java.util.ArrayList;
 
 /**
@@ -33,7 +33,7 @@ public class Ejercicio01 {
         //persona.
         //Una vez que la Persona elige el Perro se le asigna, al final deberemos mostrar todas las
         //personas con sus respectivos perros.
-        PersonaService ps = new PersonaService();
+        AdopcionService ps = new AdopcionService();
         ArrayList<Perro> perros = new ArrayList();
         ArrayList<Perro> perrosAdoptados = new ArrayList();
         ArrayList<Persona> personas = new ArrayList();
