@@ -120,10 +120,14 @@ public class RuletaService {
     public void ronda(Juego juego) {
         boolean bandera;
         int contador = 0;
-
+        Jugador jugador;
+        
         do {
-            System.out.println(juego.getJugadores().get(contador).getNombre() + " Va a disparar");
-            bandera = disparo(juego.getRevolver(), juego.getJugadores().get(contador));
+            jugador = juego.getJugadores().get(contador);
+            
+            System.out.println(jugador.getNombre() + " Va a disparar");
+            
+            bandera = disparo(juego.getRevolver(), jugador);
 
             if (!bandera) {
                 contador += 1;
