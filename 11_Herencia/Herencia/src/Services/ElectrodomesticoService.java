@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author A309436
  */
 public class ElectrodomesticoService {
-    //• Metodo crearElectrodomestico(): le pide la información al usuario y llena el
+//• Metodo crearElectrodomestico(): le pide la información al usuario y llena el
 //electrodoméstico, también llama los métodos para comprobar el color y el consumo. Al
 //precio se le da un valor base de $1000.
 
@@ -33,6 +33,25 @@ public class ElectrodomesticoService {
         return new Electrodomestico(precio, color, consumoEnergetico, peso);
 
     }
-    
-    
+
+    protected void precioFinal(Electrodomestico e) {
+        char letras[] = {'A', 'B', 'C', 'D', 'E', 'F'};
+        double precios[] = {1000, 800, 600, 500, 300, 100};
+
+        for (int i = 0; i < letras.length; i++) {
+            if (letras[i] == e.getConsumoEnergetico()) {
+                e.setPrecio(e.getPrecio() + precios[i]);
+            }
+        }
+
+        if (e.getPeso() >= 1 && e.getPeso() <= 19) {
+            e.setPrecio(e.getPrecio() + 100);
+        } else if (e.getPeso() <= 49) {
+            e.setPrecio(e.getPrecio() + 500);
+        } else if (e.getPeso() <= 79) {
+            e.setPrecio(e.getPrecio() + 800);
+        } else {
+            e.setPrecio(e.getPrecio() + 1000);
+        }
+    }
 }

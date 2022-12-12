@@ -19,15 +19,19 @@ public class LavadoraService extends ElectrodomesticoService {
 //el atributo propio de la lavadora.
     public Lavadora crearLavadora() {
         Scanner leer = new Scanner(System.in);
-        Electrodomestico e = super.crearElectrodomestico();        
-        Lavadora lavadora = new Lavadora();
-        lavadora.setColor(e.getColor());
-        lavadora.setConsumoEnergetico(e.getConsumoEnergetico());
-        lavadora.setPeso(e.getPeso());
-        lavadora.setPrecio(e.getPrecio());
+        Electrodomestico e = super.crearElectrodomestico();
+
         System.out.println("Ingrese la capacidad de carga en litros");
-        lavadora.setCarga(leer.nextDouble());
-        
-        return lavadora;
+        double carga = leer.nextDouble();
+
+        return new Lavadora(e.getPrecio(), e.getColor(), e.getConsumoEnergetico(), e.getPeso(), carga);
     }
+
+    public void precioFinal(Lavadora lav) {
+        super.precioFinal(lav);
+        if (lav.getCarga() > 30) {
+            lav.setPrecio(lav.getPrecio() + 500);
+        }
+    }
+
 }
