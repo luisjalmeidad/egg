@@ -77,30 +77,7 @@ public class Electrodomestico {
             }
         }
         return "Blanco";
-    }
-
-    //• Método precioFinal(): según el consumo energético y su tamaño, aumentará el valor del
-    //precio. Esta es la lista de precios:
-    protected void precioFinal() {
-        char letras[] = {'A', 'B', 'C', 'D', 'E', 'F'};
-        double precios[] = {1000, 800, 600, 500, 300, 100};
-
-        for (int i = 0; i < letras.length; i++) {
-            if (letras[i] == consumoEnergetico) {
-                precio += precios[i];
-            }
-        }
-
-        if (peso >= 1 && peso <= 19) {
-            precio += 100;
-        } else if (peso <= 49) {
-            precio += 500;
-        } else if (peso <= 79) {
-            precio += 800;
-        } else {
-            precio += 1000;
-        }
-    }
+    }   
 
     @Override
     public String toString() {

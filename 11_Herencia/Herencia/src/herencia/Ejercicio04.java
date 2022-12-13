@@ -25,8 +25,7 @@ public class Ejercicio04 {
         
         System.out.println("El area del circulo es: " + cs.calcularArea(c));
         System.out.println("El perimetro del circulo es: " + cs.calcularPerimetro(c));
-        
-        
+                
         System.out.println("El area del rectangulo es: " + rs.calcularArea(rec));
         System.out.println("El perimetro del rectangulo es: " + rs.calcularPerimetro(rec));
     }
