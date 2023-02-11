@@ -4,13 +4,14 @@
  */
 package tienda.persistencia;
 
+import java.util.ArrayList;
 import tienda.entities.Fabricante;
 
 /**
  *
  * @author A309436
  */
-public class FabricanteDAO extends DAO {
+public class FabricanteDao extends DAO {
 
     public void insertFabricante(Fabricante fabricante) throws Exception {
         try {
@@ -29,6 +30,29 @@ public class FabricanteDAO extends DAO {
             throw e;
         } finally {
             desconectarBase();
+        }
+    }
+    
+    public ArrayList<Fabricante> selectFabricantes() throws Exception {
+        try {
+            String sql = "SELECT * FROM Fabricante ";
+            consultarBase(sql);
+
+            Fabricante fabricante;
+
+            ArrayList<Fabricante> fabricantes = new ArrayList();
+            while (resultado.next()) {
+                fabricante = new Fabricante();
+                fabricante.setCodigo(resultado.getLong(1));
+                fabricante.setNombre(resultado.getString(2));              
+                fabricantes.add(fabricante);
+            }
+            desconectarBase();
+            return fabricantes;
+        } catch (Exception e) {
+            e.printStackTrace();
+            desconectarBase();
+            throw new Exception("Error al obtener fabricantes");
         }
     }
 }

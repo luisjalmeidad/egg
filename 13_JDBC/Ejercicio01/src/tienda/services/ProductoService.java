@@ -112,6 +112,10 @@ public class ProductoService {
     }   
     
 //f) Ingresar un producto a la base de datos.
-//g) Ingresar un fabricante a la base de datos
+    
+
 //h) Editar un producto con datos a elección.
+    
+    
+    //g) Ingresar un fabricante a la base de datos
 }
