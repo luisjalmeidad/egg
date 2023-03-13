@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(198, 121, 173);
+
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lucida Sans';
+}

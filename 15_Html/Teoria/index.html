@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio01</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--     <style>
+        h1 {
+            text-decoration: underline;
+            text-align: center
+        }
+
+        p {
+            font-Family: arial, verdana;
+            color: white;
+            background-color: black
+        }
+
+        body {
+            color: black;
+            background-color: #cccccc;
+            text-indent: 1cm
+        }
+    </style> -->
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="https://img.icons8.com/emoji/48/null/pool-8-ball.png" alt="home" /></a>
+        <hgroup>
+            <h1>Title</h1>
+            <h2 class="tagline">
+                A lot of effort went into making this effortless.
+            </h2>
+        </hgroup>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">about</a></li>
+        </ul>
+    </nav>
+    <section class="articles">
+        <article>
+            <time datetime="2009-10-22">0ctober 22, 2009</time>
+            <h2>
+                <a href="#" title="Link to this post">Travel day</a>
+            </h2>
+            <div style="color: #000099; font-weight: bold" class="content">
+                <h3>Estas etiquetas van en <strong>azul y negrita</strong></h3>
+                Content goes here...
+            </div>
+            <section class="comments">
+                <p><a href="#">3 comments</a></p>
+            </section>
+        </article>
+    </section>
+    <aside>
+        <div class="related">
+            <p>Yo estudio en <span style="color: rgb(255, 102, 0)">Egg</span> Programación FullStack </p>
+        </div>
+        <p style="color: #990000">
+            Esto es un párrafo de color rojo.
+        </p>
+    </aside>
+
+    <form action="ruta del método que va a manejar la información" method="POST" enctype="multipart/form-data">
+        <label>Nombre del usuario</label> <br>
+        <input type="text" name="nombre"> <br>
+        <label>Edad del usuario</label> <br>
+        <input type="number" name="edad"> <br>
+        <label>Fecha de nacimiento del usuario</label> <br>
+        <input type="date" name="fechanac"> <br>
+        <label>Sexo del usuario</label> <br>
+        <input type="radio" name="sexo" value="Hombre"> Hombre <br>
+        <input type="radio" name="sexo" value="Mujer"> Mujer <br>
+        <label>País nacimiento del usuario</label> <br>
+        <select name="pais">
+            <option>Venezuela</option>
+            <option>Argentina</option>
+            <option>Chile</option>
+            <option>Uruguay</option>
+        </select>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+
+</body>
+
+
+
+
+
+</html>

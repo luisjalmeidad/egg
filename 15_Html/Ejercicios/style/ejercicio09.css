@@ -1,0 +1,70 @@
+#titulo {
+    color: rgb(15, 87, 63);
+}
+
+p strong {
+    color: red;
+}
+
+td strong {
+    color: rgb(217, 200, 19);
+}
+
+span.destacado {
+    color: rgb(217, 200, 19);
+}
+
+span.especial {
+    color: rgb(148, 5, 180);
+}
+
+span#especial {
+    color: rgb(214, 55, 185)
+}
+
+td {
+    color: green;
+}
+
+#subtitulo {
+    color: blue;
+}
+
+.especial {
+    color: rgb(217, 200, 19);
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+a:link {
+    color: red;
+}
+
+div p a:link {
+    color: green;
+}
+
+em {
+    color: blue;
+}
+
+td em {
+    color: green;
+}
+
+th {
+    color: red;
+}
+
+p {
+    color: rgb(156, 168, 22);
+}

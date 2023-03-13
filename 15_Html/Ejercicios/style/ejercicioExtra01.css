@@ -1,0 +1,12 @@
+ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+ul li {
+    padding-left: 2rem;
+    background-image: url(/source/aperture.png);
+    background-position: 0 0;
+    background-size: 1.1rem 1.1rem;
+    background-repeat: no-repeat;
+}
