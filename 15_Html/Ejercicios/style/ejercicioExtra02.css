@@ -1,0 +1,24 @@
+table,
+th,
+td {
+    text-align: center;
+    border-color: #333;
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: Arial;
+
+}
+
+.moneda {
+    text-align: left;
+    background-color: #E6F3FF;
+}
+
+.cabecera {
+    background-image: url("../source/fondo_gris.gif");
+}
+
+tr:nth-child(even) {
+    background: #FFFFCC;
+}
