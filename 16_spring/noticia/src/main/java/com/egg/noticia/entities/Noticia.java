@@ -1,10 +1,8 @@
 package com.egg.noticia.entities;
 
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
+import javax.persistence.*;
+
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -16,9 +14,11 @@ public class Noticia {
     private String id;
     private String titulo;
     private String cuerpo;
-    private Boolean hab = Boolean.TRUE;
+    @OneToOne
+    private Imagen imagen;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fecha;
+    private Boolean hab = Boolean.TRUE;
 
     public Noticia() {
     }
@@ -26,6 +26,14 @@ public class Noticia {
     public Noticia(String titulo, String cuerpo, Date fecha) {
         this.titulo = titulo;
         this.cuerpo = cuerpo;
+        this.fecha = fecha;
+    }
+
+    public Noticia(String id, String titulo, String cuerpo, Imagen imagen, Date fecha) {
+        this.id = id;
+        this.titulo = titulo;
+        this.cuerpo = cuerpo;
+        this.imagen = imagen;
         this.fecha = fecha;
     }
 
@@ -69,4 +77,11 @@ public class Noticia {
         this.fecha = fecha;
     }
 
+    public Imagen getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Imagen imagen) {
+        this.imagen = imagen;
+    }
 }

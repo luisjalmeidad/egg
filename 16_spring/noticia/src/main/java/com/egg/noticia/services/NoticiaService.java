@@ -18,31 +18,28 @@ public class NoticiaService {
 
     private void validar(String titulo, String cuerpo, Date fecha) throws MiException {
         if (titulo.isEmpty() || titulo == null) {
-            throw new MiException("Debe ingresar el titulo");
+            throw new MiException("Debe ingresar el titulo.");
         }
 
         if (cuerpo.isEmpty() || cuerpo == null) {
-            throw new MiException("Debe ingresar el cuerpo");
+            throw new MiException("Debe ingresar el cuerpo.");
+        }
+
+        if (fecha == null) {
+            throw new MiException("Debe indicar la fecha de la noticia.");
         }
         
         if (fecha.before(new Date("01/01/2023"))) {
-            throw new MiException("Ingrese noticias posterior a la fecha 01/01/2023");
+            throw new MiException("Ingrese noticias posterior a la fecha 01/01/2023.");
         }
-        
-        if (fecha == null) {
-            throw new MiException("Debe indicar la fecha de la noticia");
-        }
+
     }
 
     @Transactional
     public void crearNoticia(String titulo, String cuerpo, Date fecha) throws MiException {
         validar(titulo, cuerpo, fecha);
-        Noticia noticia = new Noticia(titulo, cuerpo, fecha);
-        noticiaRepository.save(noticia);
-    }
-    
-    public void crearNoticia(String titulo, String cuerpo) throws MiException {        
-        Noticia noticia = new Noticia(titulo, cuerpo, new Date());
+        System.out.println("Paso el validar");
+        Noticia noticia = new Noticia(titulo, cuerpo, new Date(fecha.getTime() + (1000 * 60 * 60 * 24)));
         noticiaRepository.save(noticia);
     }
 

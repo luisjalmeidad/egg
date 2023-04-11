@@ -1,6 +1,39 @@
-body{
-    background-image: url(/img/FondoZoom.jpg);
+#fondoInicio{
+    background-image: url(/img/FondoZoom_8.jpg);
+    background-color: #cccccc;
     background-size: cover;
     height: 100%;
 }
 
+#fondoNoticia{
+    background-image: url(/img/FondoZoom_9.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    height: 100%;
+}
+
+#fondoRegNoticia{
+    background-image: url(/img/FondoZoom_10.jpg);
+    background-color: #cccccc;
+    background-position: center;
+}
+
+.social-facebook {
+    background-color: #3b5998!important;
+}
+
+.social-linkedin {
+    background-color: #0976b4!important;
+}
+
+.social-instagram {
+    background-color: #3f729b!important;
+}
+
+.social-youtube {
+    background-color: #b31217!important;
+}
+
+.textCard {
+    font-family: 'Roboto', sans-serif;
+}
