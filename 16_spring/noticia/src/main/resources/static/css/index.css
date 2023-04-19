@@ -18,6 +18,15 @@
     background-position: center;
 }
 
+#fondoListNoticia
+{
+    background-image: url(/img/FondoZoom_11.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
 .social-facebook {
     background-color: #3b5998!important;
 }
@@ -34,6 +43,6 @@
     background-color: #b31217!important;
 }
 
-.textCard {
+.textCard, .textTable {
     font-family: 'Roboto', sans-serif;
 }

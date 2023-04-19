@@ -7,9 +7,7 @@
 <nav th:replace="/fragments/navbar.html :: nav"></nav>
 
 <main class="min-vh-100">
-
     <div th:replace="/fragments/title.html :: div"></div>
-
     <div class="row row-cols-1 row-cols-md-2 g-4 mx-5">
         <a th:href="@{/noticia/__${noticia.id}__}" th:each="noticia : ${noticias}"
            class="col p-4 link-offset-2 link-underline link-underline-opacity-0">
@@ -21,7 +19,6 @@
             </div>
         </a>
     </div>
-
 </main>
 
 <footer th:replace="/fragments/footer.html :: footer"></footer>

@@ -3,10 +3,12 @@ package com.egg.noticia.services;
 import com.egg.noticia.entities.Noticia;
 import com.egg.noticia.exceptions.MiException;
 import com.egg.noticia.repositories.NoticiaRepository;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +30,7 @@ public class NoticiaService {
         if (fecha == null) {
             throw new MiException("Debe indicar la fecha de la noticia.");
         }
-        
+
         if (fecha.before(new Date("01/01/2023"))) {
             throw new MiException("Ingrese noticias posterior a la fecha 01/01/2023.");
         }
@@ -44,11 +46,11 @@ public class NoticiaService {
     }
 
     public List<Noticia> listarNoticias() {
-        return noticiaRepository.findAll();
+        return noticiaRepository.buscarNoticiasHab();
     }
 
     public Noticia getOne(String id) {
-        return noticiaRepository.getOne(id);
+        return noticiaRepository.buscarNoticiaHab(id);
     }
 
     @Transactional
@@ -62,17 +64,21 @@ public class NoticiaService {
             noticia.setCuerpo(cuerpo);
             noticia.setFecha(fecha);
             noticiaRepository.save(noticia);
+        } else {
+            throw new MiException("No se encontró la noticia con el ID: " + id);
         }
     }
 
     @Transactional
-    public void bajaNoticia(String id) {
+    public void bajaNoticia(String id) throws MiException {
         Optional<Noticia> respuesta = noticiaRepository.findById(id);
 
         if (respuesta.isPresent()) {
             Noticia noticia = respuesta.get();
             noticia.setHab(Boolean.FALSE);
             noticiaRepository.save(noticia);
+        } else {
+            throw new MiException("No se encontró la noticia con el ID: " + id);
         }
     }
 }

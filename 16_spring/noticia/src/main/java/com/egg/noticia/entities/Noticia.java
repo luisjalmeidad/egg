@@ -74,7 +74,7 @@ public class Noticia {
     }
 
     public void setFecha(Date fecha) {
-        this.fecha = fecha;
+        this.fecha = new Date(fecha.getTime() + (1000 * 60 * 60 * 24));
     }
 
     public Imagen getImagen() {
