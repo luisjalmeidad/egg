@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/head.html :: head"></head>
+
+<body>
+<div th:replace="/fragments/errorData.html :: div"></div>
+<main class="min-vh-100">
+  <div th:replace="/fragments/title.html :: div"></div>
+  <div class="d-flex justify-content-center align-items-center">
+    <form th:action="@{/logincheck}"
+          class="shadow-lg align-items-center border border-black border-1 rounded-4 border-opacity-50 p-5 bg-white text-dark col-5"
+          method="POST">
+      <div class="col fw-medium">
+        <div class="mb-3 col-auto">
+          <label class="form-label">Nombre completo</label>
+          <input type="text" name="nombre" class="form-control">
+        </div>
+        <div class="mb-3 col-auto">
+          <label for="clave" class="form-label">Contraseña</label>
+          <input type="password" name="clave" class="form-control" id="clave">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center col-auto mt-2">
+        <button type="submit" class="btn btn-primary fw-medium">Ingresar</button>
+      </div>
+    </form>
+  </div>
+
+
+</main>
+
+<footer th:replace="/fragments/footer.html :: footer"></footer>
+<div th:replace="/fragments/imports.html :: div"></div>
+</body>
+</html>

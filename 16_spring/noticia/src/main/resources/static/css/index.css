@@ -27,6 +27,15 @@
     height: 100%;
 }
 
+#fondoRegUsuario
+{
+    background-image: url(/img/FondoZoom_2.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
 .social-facebook {
     background-color: #3b5998!important;
 }
