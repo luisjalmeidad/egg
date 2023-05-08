@@ -1,6 +1,7 @@
 package com.egg.noticia.services;
 
 import com.egg.noticia.entities.Noticia;
+import com.egg.noticia.entities.Periodista;
 import com.egg.noticia.exceptions.MiException;
 import com.egg.noticia.repositories.NoticiaRepository;
 
@@ -17,6 +18,10 @@ public class NoticiaService {
 
     @Autowired
     private NoticiaRepository noticiaRepository;
+    @Autowired
+    private UsuarioService usuarioService;
+    @Autowired
+    private PeriodistaService periodistaService;
 
     private void validar(String titulo, String cuerpo, Date fecha) throws MiException {
         if (titulo.isEmpty() || titulo == null) {
@@ -38,12 +43,17 @@ public class NoticiaService {
     }
 
     @Transactional
-    public void crearNoticia(String titulo, String cuerpo, Date fecha) throws MiException {
+    public void crearNoticia(String titulo, String cuerpo, Date fecha, String id) throws MiException {
         validar(titulo, cuerpo, fecha);
+
+        Periodista periodista = periodistaService.buscarPeriodistaById(id);
+
         System.out.println("Paso el validar");
-        Noticia noticia = new Noticia(titulo, cuerpo, new Date(fecha.getTime() + (1000 * 60 * 60 * 24)));
+        Noticia noticia = new Noticia(titulo, cuerpo, new Date(fecha.getTime() + (1000 * 60 * 60 * 24)), periodista);
         noticiaRepository.save(noticia);
     }
+
+
 
     public List<Noticia> listarNoticias() {
         return noticiaRepository.buscarNoticiasHab();

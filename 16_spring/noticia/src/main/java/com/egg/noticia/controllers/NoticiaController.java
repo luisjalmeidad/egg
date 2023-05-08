@@ -30,14 +30,14 @@ public class NoticiaController {
         return "noticia_form.html";
     }
 
-    @PostMapping("/registro")
-    public String crearNoticia(
+    @PostMapping("/registro/{id}")
+    public String crearNoticia(@PathVariable String id,
             @RequestParam String titulo,
             @RequestParam String cuerpo,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date fecha,
             ModelMap model) {
         try {
-            noticiaService.crearNoticia(titulo, cuerpo, fecha);
+            noticiaService.crearNoticia(titulo, cuerpo, fecha, id);
             model.put("exito", "Noticia registrada");
             return "noticia_form.html";
         } catch (MiException ex) {
@@ -53,7 +53,7 @@ public class NoticiaController {
         return "noticia.html";
     }
     @GetMapping("/lista")
-    public String listarNoticias(ModelMap model) {
+    public  String listarNoticias(ModelMap model) {
         List<Noticia> noticias = noticiaService.listarNoticias();
         model.addAttribute("noticias", noticias);
         return "noticia_list.html";

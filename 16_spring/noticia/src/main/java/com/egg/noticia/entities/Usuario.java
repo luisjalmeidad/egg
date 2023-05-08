@@ -7,19 +7,31 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name ="usuarios")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Usuario {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
-
-    private String nombre;
-    private String clave;
+    protected String id;
+    protected String nombre;
+    protected String clave;
     @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaAlta;
+    protected Date fechaAlta;
     @Enumerated(EnumType.STRING)
-    private Rol rol;
-    private Boolean activo;
+    protected Rol rol;
+    protected Boolean activo;
+
+    public Usuario() {
+    }
+
+    public Usuario(String nombre, String clave, Rol rol) {
+        this.nombre = nombre;
+        this.clave = clave;
+        this.fechaAlta = new Date();
+        this.rol = rol;
+        this.activo = true;
+    }
 
     public String getId() {
         return id;
