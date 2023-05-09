@@ -1,0 +1,72 @@
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navbar {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+            background-color: #7b96ec;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 5px;
+            &:hover{
+                background-color: #6c8bf0;
+            }
+        }
+    }
+
+    .registro-curso {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 4rem;
+        text-align: center;
+        width: 350px;
+        height: 300px;
+        border-radius: 1rem;
+        background-color: white;
+        padding: 2rem 1rem;
+
+        h3 {
+            color: #5d5b8d;
+            margin: 0;
+        }
+
+        .form-curso {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+
+            input {
+                border: none;
+                border-bottom: 1px solid #a7bcff;
+                padding: 15px;
+                width: 250px;
+            }
+
+            button {
+                background-color: #7b96ec;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                font-weight: 700;
+                width: 250px;
+                padding: 10px;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,88 @@
+.perfil-profesor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 50%;
+        gap: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .cursos {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: 50%;
+        gap: 1rem;
+        border-radius: 1rem;
+        overflow-y: scroll;
+        background-color: white;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .curso-info{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 10px;
+            .delete-curso-icon{
+                cursor: pointer;
+                transition: all .5s;
+                color: blueviolet;
+                &:hover{
+                    transform: scale(120%);
+                }
+            }
+        }
+    }
+}
+
+.add-cursos-link {
+    background-color: #7b96ec;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px;
+    text-decoration: none;
+}
+
+button {
+    background-color: #7b96ec;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.link-to {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    
+}
+
+.selected {
+    background-color: greenyellow;
+}

@@ -1,0 +1,64 @@
+.curso {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 50%;
+        gap: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+    }
+
+    .integrantes {
+        width: 40%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    p {
+        margin: 0;
+        height: 10%;
+        width: 100%;
+        background-color: white;
+        padding: 8px;
+        border-radius: 1rem;
+    }
+
+    .alumnos {
+        border-radius: 1rem;
+        padding: 8px;
+        height: 90%;
+        width: 100%;
+        background-color: white;
+        overflow-y: scroll;
+        gap: 1rem;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .link-to {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 400;
+            padding: 1rem;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
